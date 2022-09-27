@@ -2,14 +2,23 @@ import './App.css';
 import Form from './components/common/Form'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import {useState} from "react";
+import { app } from './firebase-config';
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
 
 function App() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleAction = (id) => {
-console.log(id);
-    }
+const authentication = getAuth();
+if (id === 2) {
+    createUserWithEmailAndPassword(authentication, email, password)
+        .then((response) => {
+            console.log(response)
+        })
+}
+}
+
 
   return (
       <Router>
