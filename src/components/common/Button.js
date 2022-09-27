@@ -6,7 +6,7 @@ export default function BasicButtons({title, handleAction}) {
     return (
         <Stack spacing={2} direction="row">
 
-            <Button variant="contained">{title} handleAction={handleAction}</Button>
+            <Button variant="contained" onClick={handleAction}>{title}</Button>
         </Stack>
     );
 }

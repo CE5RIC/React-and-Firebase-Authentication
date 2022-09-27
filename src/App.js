@@ -7,8 +7,8 @@ function App() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleAction = () => {
-
+    const handleAction = (id) => {
+console.log(id);
     }
 
   return (
@@ -16,8 +16,8 @@ function App() {
     <div className="App">
         <>
             <Routes>
-                <Route path='/login' element={<Form title="Login" setEmail={setEmail} setPassword={setPassword} handleAction={() => handleAction()} />} />
-                <Route path='/register' element={<Form title="Register" setEmail={setEmail} setPassword={setPassword} handleAction={() => handleAction()} />} />
+                <Route path='/login' element={<Form title="Login" setEmail={setEmail} setPassword={setPassword} handleAction={() => handleAction(1)} />} />
+                <Route path='/register' element={<Form title="Register" setEmail={setEmail} setPassword={setPassword} handleAction={() => handleAction(2)} />} />
             </Routes>
         </>
     </div>

@@ -23,7 +23,7 @@ export default function BasicTextFields({title, setPassword, setEmail, handleAct
                 <TextField id="email" label="Enter the Email" variant="outlined" onChange={(e) => setEmail(e.target.value)} />
                 <TextField id="password" label="Enter the Password" variant="outlined" onChange={(e) => setPassword(e.target.value)} />
             </Box>
-            <Button title={title} />
+            <Button title={title} handleAction={handleAction} />
         </div>
     );
 }
